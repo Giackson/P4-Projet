@@ -1,0 +1,779 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  padding: 0;
+}
+
+@keyframes backgroundloader {
+  0% {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    z-index: 1;
+    inset: 0 0 0 0;
+    animation-fill-mode: none;
+  }
+}
+@keyframes loaderpage {
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes delaientree {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    animation-duration: 1s;
+  }
+}
+@keyframes delaiplat {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    animation-duration: 1s;
+  }
+}
+@keyframes delaidessert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    animation-duration: 1s;
+  }
+}
+/* Small devices (phones, less than 768px) */
+/* ... */
+/** font-family: "Roboto", sans-serif; **/
+.container-loader {
+  animation: backgroundloader 13s;
+}
+
+.loader {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  animation: loaderpage 0.5s 3.8s;
+  animation-fill-mode: forwards;
+}
+.loader i {
+  font-size: 40px;
+  animation: spin 4s infinite linear;
+}
+.loader .fa-wine-glass {
+  color: #9356dc;
+}
+
+.loader2 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  animation: loaderpage 0.5s 3.8s;
+  animation-fill-mode: forwards;
+}
+.loader2 i {
+  font-size: 40px;
+  animation: spin2 4s infinite linear;
+}
+.loader2 .fa-wine-glass {
+  color: #ff79da;
+}
+
+.fonctionnement-home h2 {
+  font-size: 24px;
+  margin-top: 45px;
+  margin-left: 35px;
+  margin-bottom: 25px;
+  font-family: "roboto";
+  font-weight: bold;
+}
+
+.fonctionnement-home ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  margin-bottom: 75px;
+  margin-left: 30px;
+}
+
+.card-fonctionnement {
+  display: flex;
+  width: 90%;
+  height: 72px;
+  border-radius: 20px;
+  background: var(--Background, #f6f6f6);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.card-fonctionnement i {
+  transform: translate(-20px);
+  width: 15px;
+}
+.card-fonctionnement span {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  margin-right: 40px;
+  transform: translate(-10px);
+  font-size: 12px;
+}
+.card-fonctionnement .card-fonctionnement .fa-list-ul .fa-mobile-screen-button {
+  color: #808080;
+  font-size: 20px;
+}
+.card-fonctionnement .fa-store {
+  color: #9356dc;
+}
+
+.restaurants-home {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  gap: 18px;
+  padding-bottom: 75px;
+}
+.restaurants-home h2 {
+  margin-top: 50px;
+  margin-left: 35px;
+  margin-bottom: 0px;
+  font-family: "roboto";
+}
+
+.card-restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 251px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: white;
+  width: 90%;
+  font-family: "roboto";
+}
+.card img {
+  border-radius: 15px 15px 0px 0px;
+  height: 179px;
+  width: 100%;
+  object-fit: cover;
+}
+.card .logonouveau {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  height: 29px;
+  width: 80px;
+  background-color: #99e2d0;
+  right: 0;
+  margin-right: 8%;
+  margin-top: 10px;
+}
+.card .logonouveau p {
+  color: #008766;
+  font-size: 14px;
+}
+
+.card-detail {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  line-height: 0.5;
+  background-color: white;
+  font-family: "roboto";
+}
+.card-detail i {
+  color: black;
+  position: absolute;
+  font-size: 22px;
+  right: 30px;
+  top: 20px;
+}
+.card-detail .fa-solid {
+  opacity: 0;
+  background: -webkit-linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+  transition: opacity 300ms linear;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.card-detail .fa-solid:hover {
+  opacity: 1;
+  background: -webkit-linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 300ms linear;
+  -webkit-transition: all 0.3s ease-out;
+}
+.card-detail .card-title {
+  color: black;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-top: 19px;
+}
+.card-detail .card-subtitle {
+  color: black;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.card-detail a {
+  text-decoration: none;
+}
+
+.restaurants-home a {
+  text-decoration: none;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "roboto";
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+  .fonctionnement-home h2 {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-left: 180px;
+    margin-bottom: 25px;
+    font-family: "roboto";
+    font-weight: bold;
+  }
+  .fonctionnement-home ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 50px;
+  }
+  .card-fonctionnement {
+    display: flex;
+    width: 322px;
+    height: 72px;
+    border-radius: 20px;
+    background: var(--Background, #f6f6f6);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .card-fonctionnement i {
+    transform: translate(-20px);
+    width: 15px;
+  }
+  .card-fonctionnement span {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #9356dc;
+    margin-right: 40px;
+    transform: translate(-10px);
+    font-size: 12px;
+  }
+  .restaurants-home {
+    display: flex;
+    background-color: #f6f6f6;
+    gap: 18px;
+    padding-bottom: 75px;
+  }
+  .restaurants-home h2 {
+    margin-left: 180px;
+  }
+  .card-restaurant {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    height: 251px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: white;
+    width: calc((100% - 50px) / 2);
+    font-family: "roboto";
+  }
+  .card img {
+    border-radius: 15px 15px 0px 0px;
+    height: 179px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .logonouveau {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    height: 29px;
+    width: 80px;
+    background-color: #99e2d0;
+    right: 0;
+    margin-right: 8%;
+    margin-top: 10px;
+  }
+  .logonouveau p {
+    color: #008766;
+    font-size: 14px;
+  }
+  .card-detail {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    line-height: 0.5;
+    background-color: white;
+    font-family: "roboto";
+  }
+  .card-detail i {
+    position: absolute;
+    font-size: 22px;
+    right: 30px;
+    top: 20px;
+    color: black;
+  }
+  .card-detail .fa-regular {
+    transition: opacity 300ms linear;
+  }
+  .card-detail .fa-solid {
+    opacity: 0;
+    background: -webkit-linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+    transition: opacity 300ms linear;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .card-detail .fa-solid:hover {
+    opacity: 1;
+    background: -webkit-linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 300ms linear;
+    -webkit-transition: all 0.3s ease-out;
+  }
+  .card-detail .card-title {
+    display: flex;
+    position: relative;
+    color: black;
+    padding-left: 15px;
+  }
+  .card-detail .card-subtitle {
+    display: flex;
+    color: black;
+    position: relative;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    padding-left: 15px;
+  }
+  .card-detail a {
+    text-decoration: none;
+  }
+}
+/* Small devices (phones, less than 768px) */
+/* ... */
+/** font-family: "Roboto", sans-serif; **/
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+}
+
+/* Small devices (phones, less than 768px) */
+/* ... */
+/** font-family: "Roboto", sans-serif; **/
+.button-commander {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 30px;
+  height: 55px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 45px;
+  font-weight: 500;
+  font-family: "roboto";
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: var(--Button-Gradient, linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%));
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.05);
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+  .button-explorer {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    height: 55px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 0px 30px;
+    border-radius: 45px;
+    font-weight: bold;
+    font-family: "roboto";
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: var(--Button-Gradient, linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%));
+  }
+  .button-explorer:hover {
+    background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 30px;
+    height: 55px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 45px;
+    font-weight: bold;
+    font-family: "roboto";
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: var(--Button-Gradient, linear-gradient(0deg, #9356dc -11.44%, #ff79da 123.93%));
+  }
+  .btn .a {
+    color: white;
+    text-decoration: none;
+  }
+  .btn :hover {
+    background: var(--Button-Gradient, linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%));
+  }
+}
+/* Small devices (phones, less than 768px) */
+/* ... */
+/** font-family: "Roboto", sans-serif; **/
+.returnbutton i {
+  display: flex;
+  position: absolute;
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  text-emphasis: none;
+  padding: 20px 50px 14px 30px;
+  align-items: center;
+  align-items: center;
+  color: black;
+}
+
+.logo-header {
+  position: relative;
+  display: flex;
+  font-family: "Shrikhand", cursive;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  height: 48px;
+  margin-top: 14px;
+  margin-bottom: 1px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.location {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: #eaeaea;
+  gap: 8px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+}
+.location input {
+  border: none;
+  height: 19px;
+  font-size: 16px;
+  background-color: #eaeaea;
+  margin-right: 10px;
+}
+.location i {
+  font-size: 16px;
+  margin-left: 65px;
+}
+
+.header-home {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+}
+.header-home h1 {
+  height: 68px;
+  margin: 40px 60px 0px 60px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-weight: bold;
+  line-height: normal;
+  font-style: normal;
+}
+.header-home p {
+  height: 46px;
+  font-size: 18px;
+  margin: 0px 26px 40px 34px;
+  text-align: center;
+  font-family: "roboto";
+  font-weight: 300;
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+  .header-home {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    padding-bottom: 50px;
+  }
+  .header-home h1 {
+    width: 75%;
+    height: 68px;
+    margin: 40px 60px 0px 60px;
+    font-size: 24px;
+    text-align: center;
+    align-self: center;
+    font-family: "Roboto", cursive;
+    font-weight: bold;
+    line-height: normal;
+    font-style: normal;
+  }
+  .header-home p {
+    height: 46px;
+    font-size: 18px;
+    margin: 0px 26px 40px 34px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: 300;
+  }
+}
+/* Small devices (phones, less than 768px) */
+/* ... */
+/** font-family: "Roboto", sans-serif; **/
+.footer-home {
+  flex-direction: column;
+  background-color: #353535;
+  align-items: flex-start;
+  padding-top: 20px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  top: 0px;
+}
+.footer-home h1 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+}
+.footer-home ul {
+  padding-top: 10px;
+  list-style: none;
+  color: white;
+  line-height: 0;
+}
+
+.footer-liens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start;
+  margin-left: 25px;
+  padding-bottom: 25px;
+  gap: 8px;
+}
+.footer-liens a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+}
+.footer-liens i {
+  width: 25px;
+  font-size: 13px;
+  padding-right: 8px;
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+  .footer-home {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: row-reverse;
+    height: 114px;
+  }
+  .footer-home h1 {
+    justify-content: center;
+    margin-right: 40px;
+    align-self: center;
+  }
+  .footer-liens {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    gap: 30px;
+    display: flex;
+    padding-bottom: 0px;
+  }
+  .footer-liens i {
+    width: 25px;
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

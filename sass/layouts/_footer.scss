@@ -1,0 +1,92 @@
+/* Small devices (phones, less than 768px) */
+
+/* ... */
+
+/** font-family: "Roboto", sans-serif; **/
+
+.footer-home {
+    flex-direction: column;
+    background-color: #353535;
+    align-items: flex-start;
+    padding-top: 20px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    top: -0px;
+
+    & h1 {
+        color: white;
+        font-family: "Shrikhand", cursive;
+        font-weight: 500;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        margin-left: 25px;
+    }
+
+    & ul {
+        padding-top: 10px;
+        list-style: none;
+        color: white;
+        line-height: 0;
+    }
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 25px;
+    padding-bottom: 25px;
+    gap: 8px;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: "roboto";
+        font-weight: 500;
+        line-height: normal;
+        font-style: normal;
+    }
+
+    & i {
+        width: 25px;
+        font-size: 13px;
+        padding-right: 8px;
+    }
+}
+/* Le code ci-dessous correspond à la version desktop uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+    .footer-home {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        flex-direction: row-reverse;
+        height: 114px;
+
+        & h1 {
+            justify-content: center;
+            margin-right: 40px;
+            align-self: center;
+        }
+    }
+
+    .footer-liens {
+        display: flex;
+        align-self: center;
+        flex-direction: row;
+        gap: 30px;
+        display: flex;
+        padding-bottom: 0px;
+
+        & i {
+            width: 25px;
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@mixin containermenu {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 15px;
+    color: #000;
+    font-family: "Roboto";
+    font-size: 12px;
+}
+
+@mixin heartanimationbefore {
+    opacity: 0;
+    background: -webkit-linear-gradient(
+        0deg,
+        #9356dc -11.44%,
+        #ff79da 123.93%
+    );
+    transition: opacity 300ms linear;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+@mixin heartanimationhover {
+    opacity: 1;
+        background: -webkit-linear-gradient(
+            0deg,
+            #9356dc -11.44%,
+            #ff79da 123.93%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 300ms linear;
+        -webkit-transition: all 0.3s ease-out;
+}
+
+@mixin checkanimation {
+    transform: translateX(0);
+    opacity: 1;
+
+    & .fa-circle-check {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+
+
+@keyframes backgroundloader {
+    0% {
+        background-color: rgba(255, 255, 255, 0.9);
+        position: fixed;
+        z-index: 1;
+        inset: 0 0 0 0;
+        animation-fill-mode: none;
+    }
+
+
+}
+
+@keyframes loaderpage {
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes delaientree {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-duration: 1s;
+    }
+}
+@keyframes delaiplat {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-duration: 1s;
+    }
+}
+@keyframes delaidessert {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        animation-duration: 1s;
+    }
+}

@@ -1,0 +1,250 @@
+//** page restaurant **//
+
+.menu-restaurant img {
+    object-fit: cover;
+
+    display: flex;
+    height: 220px;
+    width: 100%;
+
+    top: 0;
+    z-index: 1;
+}
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: #eaeaea;
+    margin-top: -15px;
+    border-radius: 25px;
+    z-index: 1;
+    gap: 15px;
+
+    & h3 {
+        font-family: "Shrikhand", cursive;
+        font-size: 28px;
+        font-weight: 400;
+
+        margin-left: 15px;
+    }
+}
+
+.like {
+    display: flex;
+    position: relative;
+    align-self: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 29px;
+
+    & .fa-regular {
+        margin-right: -49px;
+        transition: opacity 300ms linear;
+        
+    }
+
+    & .fa-solid {
+        @include heartanimationbefore;
+    }
+
+    & .fa-solid:hover {
+
+        @include heartanimationhover;
+    }
+
+ 
+}
+.subtitle-menu {
+    display: flex;
+
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 15px;
+    color: #000;
+    font-family: "Roboto";
+    font-size: 12px;
+
+    & h1 {
+        align-self: flex-start;
+        text-transform: uppercase;
+        font-size: 16px;
+        display: flex;
+        align-self: flex-start;
+        font-weight: 300;
+        margin-top: 15px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        line-height: 1.5;
+    }
+}
+
+.green-line {
+    display: flex;
+    width: 40px;
+    align-self: flex-start;
+    border: 2px solid;
+    border-color: #99e2d0;
+    margin-bottom: 0px;
+    margin-top: -13px;
+}
+
+.container-entree {
+    @include containermenu;
+    animation: delaientree 1s forwards;
+    animation-iteration-count: 1;
+}
+.container-plat {
+    @include containermenu;
+    animation: delaiplat 4s forwards;
+    animation-iteration-count: 1;
+}
+.container-dessert {
+    @include containermenu;
+    animation: delaidessert 7s forwards;
+    animation-iteration-count: 1;
+}
+
+.card-menu {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    height: 72px;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 500ms linear;
+    overflow: hidden;
+
+    & .sousmenu {
+        width: calc(100% - 110px);
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+
+    & h2 {
+   
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 12px;
+    }
+    & h3 {
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: "Roboto";
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    & .fa-circle-check {
+        color: white;
+        font-size: 18px;
+    }
+    & .price {
+        
+        width: 60px;
+        font-size: 16px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        transition: transform 500ms linear;
+        transform: translateX(100%);
+    }
+
+    & .check {
+      
+      
+        opacity: 1;
+        width: 60px;
+        display: flex;
+        background-color: #99e2d0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 15px 15px 0px;
+        border: white;
+        transform: translateX(100%);
+        transition: transform 500ms linear;
+    }
+}
+
+.card-menu {
+    &:hover .check {
+        transform: translateX(0);
+        opacity: 1;
+        
+
+    }
+
+    &:hover .fa-circle-check {
+        animation: spin 1s;
+    }
+    &:hover .price {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    &:hover .h2 {
+        overflow: hidden;
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+     }
+ 
+     &:hover .h3 {
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+     }
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+    .menu-restaurant img {
+        object-fit: cover;
+        height: 256px;
+    }
+
+    .restaurant {
+        display: flex;
+        width: 70%;
+        margin-left: 190px;
+        margin-right: 190px;
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+
+    .title-restaurants {
+        display: flex;
+        justify-content: center;
+        & i {
+            position: absolute;
+            font-size: 28px;
+            margin-left: 40px;
+        }
+    }
+
+    .subtitle-menu h1 {
+        padding-left: 15px;
+    }
+
+    .green-line {
+        margin-left: 15px;
+    }
+
+    .price span {
+        position: relative;
+        font-size: 16px;
+    }
+}

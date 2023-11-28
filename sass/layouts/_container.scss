@@ -1,0 +1,399 @@
+/* Small devices (phones, less than 768px) */
+
+/* ... */
+
+/** font-family: "Roboto", sans-serif; **/
+
+.container-loader {
+    animation: backgroundloader 13s;
+}
+
+.loader {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    animation: loaderpage 0.5s 3.8s;
+    animation-fill-mode: forwards;
+
+    & i {
+        font-size: 40px;
+        animation: spin 4s infinite linear;
+    }
+
+    & .fa-wine-glass {
+        color: #9356dc;
+    }
+}
+.loader2 {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    animation: loaderpage 0.5s 3.8s;
+    animation-fill-mode: forwards;
+
+    & i {
+        font-size: 40px;
+        animation: spin2 4s infinite linear;
+    }
+
+    & .fa-wine-glass {
+        color: #ff79da;
+    }
+}
+
+.fonctionnement-home h2 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    font-family: "roboto";
+    font-weight: bold;
+}
+
+.fonctionnement-home ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style: none;
+    margin-bottom: 75px;
+    margin-left: 30px;
+}
+
+.card-fonctionnement {
+    display: flex;
+    width: 90%;
+    height: 72px;
+
+    border-radius: 20px;
+    background: var(--Background, #f6f6f6);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+
+    & i {
+        transform: translate(-20px);
+        width: 15px;
+    }
+
+    & span {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #9356dc;
+        margin-right: 40px;
+        transform: translate(-10px);
+        font-size: 12px;
+    }
+
+    .card-fonctionnement .fa-list-ul .fa-mobile-screen-button {
+        color: #808080;
+        font-size: 20px;
+    }
+    & .fa-store {
+        color: #9356dc;
+    }
+}
+
+.restaurants-home {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    gap: 18px;
+    padding-bottom: 75px;
+
+    & h2 {
+        margin-top: 50px;
+        margin-left: 35px;
+        margin-bottom: 0px;
+        font-family: "roboto";
+    }
+}
+
+.card-restaurant {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    height: 251px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: white;
+    width: 90%;
+    font-family: "roboto";
+    & img {
+        border-radius: 15px 15px 0px 0px;
+        height: 179px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .logonouveau {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        height: 29px;
+        width: 80px;
+        background-color: #99e2d0;
+        right: 0;
+        margin-right: 8%;
+        margin-top: 10px;
+
+        & p {
+            color: #008766;
+            font-size: 14px;
+        }
+    }
+}
+
+.card-detail {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    line-height: 0.5;
+    background-color: white;
+    font-family: "roboto";
+
+    & i {
+       
+        color: black;
+        position: absolute;
+        font-size: 22px;
+        right: 30px;
+        top: 20px;
+    }
+
+
+    & .fa-solid {
+      
+    @include heartanimationbefore;
+    }
+
+
+
+    & .fa-solid:hover {
+     @include heartanimationhover;
+    }
+
+    & .card-title {
+        color: black;
+        font-size: 20px;
+        padding-left: 15px;
+        padding-top: 19px;
+    }
+
+    & .card-subtitle {
+        color: black;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 300;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.restaurants-home a {
+    text-decoration: none;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+
+    font-weight: 500;
+    font-family: "roboto";
+}
+
+/* Le code ci-dessous correspond à la version desktop uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 1024px) {
+    .fonctionnement-home h2 {
+        font-size: 24px;
+        margin-top: 50px;
+        margin-left: 180px;
+        margin-bottom: 25px;
+        font-family: "roboto";
+        font-weight: bold;
+    }
+
+    .fonctionnement-home ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        list-style: none;
+        margin-bottom: 50px;
+    }
+
+    .card-fonctionnement {
+        display: flex;
+
+        width: 322px;
+        height: 72px;
+
+        border-radius: 20px;
+        background: var(--Background, #f6f6f6);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        align-items: center;
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 16px;
+        flex-shrink: 0;
+
+        & i {
+            transform: translate(-20px);
+            width: 15px;
+        }
+
+        & span {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #9356dc;
+            margin-right: 40px;
+            transform: translate(-10px);
+            font-size: 12px;
+        }
+    }
+
+    .restaurants-home {
+        display: flex;
+
+        background-color: #f6f6f6;
+        gap: 18px;
+        padding-bottom: 75px;
+
+        & h2 {
+            margin-left: 180px;
+        }
+    }
+
+    .card-restaurant {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 10px;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        position: relative;
+        height: 251px;
+        border-radius: 0px 0px 15px 15px;
+        background-color: white;
+        width: calc((100% - 50px) / 2);
+        font-family: "roboto";
+        & img {
+            border-radius: 15px 15px 0px 0px;
+            height: 179px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .logonouveau {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        height: 29px;
+        width: 80px;
+        background-color: #99e2d0;
+        right: 0;
+        margin-right: 8%;
+        margin-top: 10px;
+
+        & p {
+            color: #008766;
+            font-size: 14px;
+        }
+    }
+
+    .card-detail {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+       
+        line-height: 0.5;
+        background-color: white;
+        font-family: "roboto";
+
+        & i {
+           
+            position: absolute;
+            font-size: 22px;
+            right: 30px;
+            top: 20px;
+            color: black;
+        }
+        & .fa-regular {
+          
+            transition: opacity 300ms linear;
+            
+        }
+
+        & .fa-solid {
+            @include heartanimationbefore;
+        }
+
+        & .fa-solid:hover {
+            @include heartanimationhover;
+        }    
+
+        & .card-title {
+            display: flex;
+            position: relative;
+            color: black;
+            padding-left: 15px;
+        }
+
+        & .card-subtitle {
+            display: flex;
+            color: black;
+            position: relative;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 300;
+            padding-left: 15px;
+        }
+
+        & a {
+            text-decoration: none;
+        }
+    }
+}
