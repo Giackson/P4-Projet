@@ -34,14 +34,15 @@
 .like {
     display: flex;
     position: relative;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     margin-top: 20px;
     font-size: 29px;
 
     & .fa-regular {
         margin-right: -49px;
-        transition: opacity 300ms linear;
+        
         
     }
 
@@ -121,17 +122,19 @@
     overflow: hidden;
 
     & .sousmenu {
-        width: calc(100% - 110px);
+        width: calc(100% - 60px);
         padding-top: 10px;
-        padding-right: 10px;
+        
+        transition: all 500ms linear;
     }
 
     & h2 {
    
         white-space: nowrap;
-        overflow: hidden;
+        
         text-overflow: ellipsis;
-        padding-left: 12px;
+        padding-left: 10px;
+       
     }
     & h3 {
 
@@ -139,8 +142,9 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-family: "Roboto";
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 300;
+        
     }
 
     & .fa-circle-check {
@@ -156,14 +160,15 @@
         align-items: end;
         padding-right: 20px;
         padding-bottom: 10px;
-        transition: transform 500ms linear;
-        transform: translateX(100%);
+        transition: all 500ms linear;
+        
     }
 
     & .check {
-      
-      
-        opacity: 1;
+        position: absolute;
+        bottom:0;
+        top:0;
+        right:0;
         width: 60px;
         display: flex;
         background-color: #99e2d0;
@@ -171,39 +176,45 @@
         justify-content: center;
         border-radius: 0px 15px 15px 0px;
         border: white;
-        transform: translateX(100%);
-        transition: transform 500ms linear;
+        transform: translateX(calc(100% + 1px));
+        transition: all 500ms linear;
+    
     }
 }
 
 .card-menu {
+    .name-plat {
+        transition: all 500ms linear;
+    }
+    &:hover .sousmenu {
+        padding-right: 60px;
+    }
+
     &:hover .check {
         transform: translateX(0);
         opacity: 1;
-        
-
     }
-
+    &:hover .price {
+        transform: translateX(-60px);
+        opacity: 1;
+    }
     &:hover .fa-circle-check {
         animation: spin 1s;
     }
-    &:hover .price {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    &:hover .h2 {
-        overflow: hidden;
-        white-space: nowrap;
 
-        text-overflow: ellipsis;
-     }
- 
-     &:hover .h3 {
+
+     &:hover .name-plat {
         overflow: hidden;
         white-space: nowrap;
-        overflow: hidden;
         text-overflow: ellipsis;
-     }
+    }
+
+    &:hover h2,
+    &:hover h3 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
 }
 
 /* Le code ci-dessous correspond à la version desktop uniquement */
