@@ -42,8 +42,6 @@
 
     & .fa-regular {
         margin-right: -49px;
-        
-        
     }
 
     & .fa-solid {
@@ -51,11 +49,8 @@
     }
 
     & .fa-solid:hover {
-
         @include heartanimationhover;
     }
-
- 
 }
 .subtitle-menu {
     display: flex;
@@ -124,27 +119,23 @@
     & .sousmenu {
         width: calc(100% - 60px);
         padding-top: 10px;
-        
+
         transition: all 500ms linear;
     }
 
     & h2 {
-   
         white-space: nowrap;
-        
+
         text-overflow: ellipsis;
         padding-left: 10px;
-       
     }
     & h3 {
-
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         font-family: "Roboto";
         font-size: 14px;
         font-weight: 300;
-        
     }
 
     & .fa-circle-check {
@@ -152,7 +143,6 @@
         font-size: 18px;
     }
     & .price {
-        
         width: 60px;
         font-size: 16px;
         display: flex;
@@ -161,14 +151,13 @@
         padding-right: 20px;
         padding-bottom: 10px;
         transition: all 500ms linear;
-        
     }
 
     & .check {
         position: absolute;
-        bottom:0;
-        top:0;
-        right:0;
+        bottom: 0;
+        top: 0;
+        right: 0;
         width: 60px;
         display: flex;
         background-color: #99e2d0;
@@ -178,7 +167,6 @@
         border: white;
         transform: translateX(calc(100% + 1px));
         transition: all 500ms linear;
-    
     }
 }
 
@@ -201,20 +189,17 @@
     &:hover .fa-circle-check {
         animation: spin 1s;
     }
-
-
-     &:hover .name-plat {
+    &:hover .name-plat {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-
     &:hover h2,
     &:hover h3 {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-}
+    }
 }
 
 /* Le code ci-dessous correspond à la version desktop uniquement */
